@@ -60,11 +60,7 @@ void Board_Init(void)
 	//IO0DIR |= 1 << 11; // RELAY IS CONNECTED TO P0.11
 	IO0DIR |= 1U<<15 | 1U << 31 | 0x00FF0000; // to set P0.15 to P0.23 as o/ps ,
   IO1DIR |= 1U << 25;	              // to set P1.25 as o/p used for EN
-                                    // make D7 Led (P0.31) on off for testing		
-	IO0DIR |= 1U<<28|1U<<29|1U<<30; //for 7seg display
-																	//P0.28 Data pin of first register
-																	//P0.29 Clock pin of shift registers, make 1 to 0
-	//P0.30 Strobe pin of shift registers: 1 to 0
+                                    // make D7 Led (P0.31) on off for testing
 }
 unsigned int adc(int no,int ch)
 {
