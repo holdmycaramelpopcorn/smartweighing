@@ -271,7 +271,11 @@ int main()
 				while(1)
 				{
 		  //Weight Measurement
-			wt = adc(1,3);
+			IO0DIR|=1<<13;
+			IO0SET|=1<<13;
+			wt=adc(1,3);
+			delay_ms(1);
+			IO0CLR|=1<<13;
 			sprintf((char *)msg,"Enter Item Code");
 			LCD_CmdWrite(0x94); LCD_DisplayString((char*)msg);
 			delay(2000);
