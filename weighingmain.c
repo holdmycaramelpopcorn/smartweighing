@@ -23,12 +23,9 @@ void timer1_Init(void);// generates interrupt every 1sec
 void delay(int cnt);
 void RTC_SetDateTime(rtc_t *rtc);
 void RTC_GetDateTime(rtc_t *rtc);
-void runDCMotor(unsigned int direction,unsigned int speed);
 unsigned int adc(int no,int ch);
 void serialPrint(unsigned val);//print int on serialport
 void serialPrintStr(char * buf);//print string on serialport
-void wrongbuzz(void);
-void rightbuzz(void);
 unsigned int matrixentry(unsigned int);
 
 //global variables
